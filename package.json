@@ -1,0 +1,21 @@
+{
+  "name": "my-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:demo1": "turbo build --filter=demo1",
+    "build": "turbo build",
+    "dev": "turbo dev"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsh-components": "workspace:^",
+    "jsh-utils": "workspace:^"
+  }
+}
