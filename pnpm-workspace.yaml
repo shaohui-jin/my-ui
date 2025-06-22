@@ -1,5 +1,5 @@
 packages:
-  # 放置各种项目
-  - 'packages/*'
+  # 放置组件库说明文档、demo等等
+  - 'project/*'
   # 放置各种公用代码
-  - '_public_/**'
+  - 'packages/**'

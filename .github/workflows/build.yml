@@ -21,27 +21,27 @@ jobs:
         with:
           run_install: true
           version: 8
-          
+
       - name: 设置 Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: pnpm
-          
+
       - name: 全局安装turbo
         run: pnpm install turbo -g
 
       # 运行构建脚本
       - name: Build
-        run: pnpm run build:demo1
+        run: pnpm run build:doc
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
-          # 部署目录为默认输出目录 
-          build_dir: packages/demo1/dist
+          # 部署目录为默认输出目录
+          build_dir: project/doc/dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

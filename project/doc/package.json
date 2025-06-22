@@ -1,5 +1,5 @@
 {
-  "name": "demo1",
+  "name": "doc",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "jsh-components": "workspace:^",
-    "jsh-utils": "workspace:^",
+    "sla-lemon": "workspace:^",
+    "sla-utils": "workspace:^",
     "vue": "^3.5.13"
   },
   "devDependencies": {

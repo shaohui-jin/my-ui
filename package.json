@@ -6,16 +6,19 @@
   "packageManager": "pnpm@8.15.4",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:demo1": "turbo build --filter=demo1",
-    "build": "turbo build",
-    "dev": "turbo dev"
+    "build:doc": "turbo build --filter=doc",
+    "build:all": "turbo build",
+    "build": "turbo build --filter=my-ui-docs",
+    "dev:all": "turbo dev",
+    "dev:doc": "turbo dev --filter=doc",
+    "dev": "turbo dev --filter=doc "
   },
   "private": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsh-components": "workspace:^",
-    "jsh-utils": "workspace:^"
+    "sla-lemon": "workspace:^",
+    "sla-utils": "workspace:^"
   }
 }

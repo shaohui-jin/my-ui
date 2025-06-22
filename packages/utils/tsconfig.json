@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015", // 或者根据需要选择 "ES6", "ES2015", "ESNext" 等
+    "strict": true,      // 启用所有严格类型检查选项
+    "esModuleInterop": true // 允许导入非ES模块
+  },
+  "include": [
+    "modules/**/*.ts",
+  ]
+}
