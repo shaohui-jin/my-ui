@@ -1,5 +1,11 @@
+<script lang="ts">
+  export default {
+    name: 'LTextOverflowArea'
+  }
+</script>
 <script setup lang="ts">
-import  { ref, computed } from 'vue'
+import  { computed } from 'vue'
+
 
 const props = defineProps({
   height: {
@@ -50,7 +56,7 @@ const computedPadding = computed(() => {
 </template>
 
 <style  lang="less">
-@import url('../assets/common.css');
+@import url('../../common/assets/common.css');
 
 .l-text-overflow-area {
   border: 1px solid #000;

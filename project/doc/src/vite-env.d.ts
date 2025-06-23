@@ -1,2 +1,3 @@
 /// <reference types="vite/client" />
-declare module 'sla-lemon'
+
+// declare module 'sla-lemon'

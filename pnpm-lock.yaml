@@ -26,9 +26,16 @@ importers:
       less-loader:
         specifier: ^12.3.0
         version: 12.3.0(less@4.3.0)
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
       vue:
         specifier: ^3.5.16
         version: 3.5.16(typescript@5.8.3)
+    devDependencies:
+      vue-tsc:
+        specifier: ^2.2.8
+        version: 2.2.10(typescript@5.8.3)
 
   packages/utils:
     dependencies:

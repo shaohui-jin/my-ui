@@ -2,7 +2,7 @@
   "name": "sla-utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {

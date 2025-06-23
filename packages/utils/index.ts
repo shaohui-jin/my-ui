@@ -1,3 +1,6 @@
-export { concurRequest } from './modules/request/index'
+import { concurRequest } from './modules/request'
 
 
+export {
+  concurRequest
+}

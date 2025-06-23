@@ -6,6 +6,7 @@
  * @example const res = concurRequest(["https://jsonplaceholder.typicode.com/posts"], 3)
  */
 export const concurRequest = (urls: string[], maxNum: number): Promise<any[]> => {
+  // @ts-ignore
   return new Promise((resolve: any, reject: any) => {
     let nextIndex = 0; // 下一个请求的索引
     let finishCount = 0 // 完成的请求数量

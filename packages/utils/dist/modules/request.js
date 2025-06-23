@@ -9,6 +9,7 @@ exports.concurRequest = void 0;
  * @example const res = concurRequest(["https://jsonplaceholder.typicode.com/posts"], 3)
  */
 var concurRequest = function (urls, maxNum) {
+    // @ts-ignore
     return new Promise(function (resolve, reject) {
         var nextIndex = 0; // 下一个请求的索引
         var finishCount = 0; // 完成的请求数量
