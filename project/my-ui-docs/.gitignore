@@ -1,0 +1,6 @@
+# Logs
+/.turbo/
+/dist/
+/.cache/
+
+/node_modules/

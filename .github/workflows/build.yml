@@ -33,7 +33,7 @@ jobs:
 
       # 运行构建脚本
       - name: Build
-        run: pnpm run build:doc
+        run: pnpm run build
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
@@ -41,7 +41,7 @@ jobs:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
           # 部署目录为默认输出目录
-          build_dir: project/doc/dist
+          build_dir: project/my-ui-docs/dist
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
