@@ -12,42 +12,35 @@ import { computed } from 'vue';
 export default await (() => __awaiter(void 0, void 0, void 0, function* () {
     const props = defineProps({
         height: {
-            type: [Number, String],
+            type: Number,
             default: 100
         },
         content: {
             type: String,
-            default: 'ashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznl' +
-                'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-                'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-                'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq'
+            required: true
         },
         padding: {
-            type: [Number, String],
+            type: Number,
             default: 10
+        },
+        width: {
+            type: Number,
+            default: 100
         }
     });
-    const computedHeight = computed(() => {
-        return typeof props.height === 'number'
-            ? props.height + 'px'
-            : /\d+(\.\d+)?px/.exec(props.height)
-                ? props.height
-                : '100px';
-    });
-    const computedPadding = computed(() => {
-        return typeof props.padding === 'number'
-            ? props.padding + 'px'
-            : /\d+(\.\d+)?px/.exec(props.padding)
-                ? props.padding
-                : '10px';
-    });
+    const computedHeight = computed(() => props.height + 'px');
+    const computedPadding = computed(() => props.padding + 'px');
+    const computedWidth = computed(() => props.width + 'px');
     debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
     const __VLS_ctx = {};
     let __VLS_components;
     let __VLS_directives;
     // CSS variable injection 
+    __VLS_ctx.computedWidth;
     __VLS_ctx.computedPadding;
     __VLS_ctx.computedHeight;
+    __VLS_ctx.computedHeight;
+    __VLS_ctx.computedPadding;
     // CSS variable injection end 
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "l-text-overflow-area" }));
     __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "text-container" }));
@@ -64,23 +57,25 @@ export default await (() => __awaiter(void 0, void 0, void 0, function* () {
             return {
                 computedHeight: computedHeight,
                 computedPadding: computedPadding,
+                computedWidth: computedWidth,
             };
         },
         props: {
             height: {
-                type: [Number, String],
+                type: Number,
                 default: 100
             },
             content: {
                 type: String,
-                default: 'ashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznl' +
-                    'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-                    'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-                    'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq'
+                required: true
             },
             padding: {
-                type: [Number, String],
+                type: Number,
                 default: 10
+            },
+            width: {
+                type: Number,
+                default: 100
             }
         },
         name: 'LTextOverflowArea'
@@ -91,19 +86,20 @@ export default await (() => __awaiter(void 0, void 0, void 0, function* () {
         },
         props: {
             height: {
-                type: [Number, String],
+                type: Number,
                 default: 100
             },
             content: {
                 type: String,
-                default: 'ashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznl' +
-                    'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-                    'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-                    'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq'
+                required: true
             },
             padding: {
-                type: [Number, String],
+                type: Number,
                 default: 10
+            },
+            width: {
+                type: Number,
+                default: 100
             }
         },
         name: 'LTextOverflowArea'

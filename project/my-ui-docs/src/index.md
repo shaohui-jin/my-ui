@@ -4,17 +4,14 @@ layout: home
 hero:
   name: "My Tool Project"
   text: "A Personal Tool Site"
-  tagline: Take Your Time
+  tagline: 
   actions:
     - theme: brand
-      text: concurRequest
+      text: 立即开始 ->
       link: /utils/concurRequest
     - theme: alt
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 团队支撑
+      link: /team
 
 features:
   - title: sla-lemon

@@ -6,41 +6,28 @@
 <script setup lang="ts">
 import  { computed } from 'vue'
 
-
 const props = defineProps({
   height: {
-    type: [Number, String],
+    type: Number,
     default: 100
   },
   content: {
     type: String,
-    default: 'ashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznl' +
-      'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-      'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq' +
-      'rqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrqashodasidhokznlrq'
+    required: true
   },
   padding: {
-    type: [Number, String],
+    type: Number,
     default: 10
+  },
+  width: {
+    type: Number,
+    default: 100
   }
 })
 
-const computedHeight = computed(() => {
-  return typeof props.height === 'number'
-    ? props.height + 'px'
-    : /\d+(\.\d+)?px/.exec(props.height)
-      ? props.height
-      : '100px'
-})
-
-const computedPadding = computed(() => {
-  return typeof props.padding === 'number'
-    ? props.padding + 'px'
-    : /\d+(\.\d+)?px/.exec(props.padding)
-      ? props.padding
-      : '10px'
-})
-
+const computedHeight = computed(() => props.height + 'px')
+const computedPadding = computed(() => props.padding + 'px')
+const computedWidth = computed(() => props.width + 'px')
 
 </script>
 
@@ -60,21 +47,22 @@ const computedPadding = computed(() => {
 
 .l-text-overflow-area {
   border: 1px solid #000;
-  width: 100px;
+  width: v-bind(computedWidth);
   padding: v-bind(computedPadding);
   background: var(--blue-light-bg);
   
   .text-container {
     height: v-bind(computedHeight);
+    --margin-height: calc(v-bind(computedHeight) - 2 * v-bind(computedPadding));
     overflow: hidden;
     &:before {
       content: '';
-      height: 80px;
+      height: var(--margin-height);
       display: block;
     }
     .content {
       line-height: 25px;
-      margin-top: -80px;
+      margin-top: calc(0px - var(--margin-height));
       word-wrap: break-word;
     }
     

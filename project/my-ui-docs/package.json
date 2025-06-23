@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vitepress": "latest"
+  },
+  "dependencies": {
+    "sla-lemon": "workspace:^"
   }
 }

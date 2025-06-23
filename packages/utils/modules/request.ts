@@ -5,7 +5,7 @@
  * @return {Promise<any[]>}
  * @example const res = concurRequest(["https://jsonplaceholder.typicode.com/posts"], 3)
  */
-export const concurRequest = (urls: string[], maxNum: number): Promise<any[]> => {
+export const concurRequest = (urls: string[] = [], maxNum: number = 3): Promise<any[]> => {
   // @ts-ignore
   return new Promise((resolve: any, reject: any) => {
     let nextIndex = 0; // 下一个请求的索引

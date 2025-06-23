@@ -6,19 +6,20 @@ outline: deep
 
 concurRequest 被用来提供并发请求Get接口。
 
-## 参数说明
+## 配置参数
 
 ```ts
-/**
- * 并发请求
- * @param urls 请求集合
- * @param maxNum 并发数量
- * @return {Promise<any[]>}
- */
-const concurRequest: (urls: string[], maxNum: number) => Promise<any[]>;
+declare function concurRequest: (urls: string[], maxNum: number) => Promise<any[]>;
 ```
 
-## example
+| 参数名 | 类型 | 默认值 | 描述         |
+|-----|----|-----|------------|
+|  urls   |  string[]  | []  | get请求url集合 |
+|  maxNum   | number   | 3   | 最大并发请求数量   |
+
+
+
+## 实例
 
 ```js
 const res = concurRequest(["https://jsonplaceholder.typicode.com/posts"], 3)

@@ -72,6 +72,10 @@ importers:
         version: 2.2.10(typescript@5.8.3)
 
   project/my-ui-docs:
+    dependencies:
+      sla-lemon:
+        specifier: workspace:^
+        version: link:../../packages/components
     devDependencies:
       vitepress:
         specifier: latest

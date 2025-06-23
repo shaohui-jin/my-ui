@@ -8,11 +8,12 @@ export default defineConfig({
   srcDir: './src',
   outDir: './dist',
   cacheDir: './.cache',
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '首页', link: '/' },
+      { text: '团队', link: '/team' },
     ],
 
     sidebar: [
@@ -20,6 +21,12 @@ export default defineConfig({
         text: 'sla-utils',
         items: [
           { text: 'concurRequest 并发请求', link: '/utils/concurRequest' },
+        ]
+      },
+      {
+        text: 'sla-components',
+        items: [
+          { text: 'text-overflow-area 文本溢出', link: '/components/text-overflow-area' },
         ]
       },
       {
@@ -33,6 +40,12 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/shaohui-jin/my-ui' }
-    ]
+    ],
+    search: {
+      provider: 'local'
+    },
+  },
+  markdown: {
+    lineNumbers: true
   }
 })
