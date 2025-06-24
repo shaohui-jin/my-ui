@@ -9,6 +9,10 @@ export default defineConfig({
   outDir: './dist',
   cacheDir: './.cache',
   lastUpdated: true,
+  sitemap: {
+    hostname: 'https://shaohui-jin.github.io/my-ui/',
+    lastmodDateOnly: false
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -21,6 +25,7 @@ export default defineConfig({
         text: 'sla-utils',
         items: [
           { text: 'concurRequest 并发请求', link: '/utils/concurRequest' },
+          { text: 'performChunk 分片执行任务', link: '/utils/performChunk' },
         ]
       },
       {

@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build:tsc": "tsc --declaration --allowJs  --outDir dist index.ts",
+    "check:tsc": "tsc --showConfig",
+    "build:tsc": "tsc --declaration --allowJs --target es6 --outDir dist index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

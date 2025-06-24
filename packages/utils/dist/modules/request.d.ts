@@ -5,4 +5,4 @@
  * @return {Promise<any[]>}
  * @example const res = concurRequest(["https://jsonplaceholder.typicode.com/posts"], 3)
  */
-export declare const concurRequest: (urls: string[], maxNum: number) => Promise<any[]>;
+export declare const concurRequest: (urls?: string[], maxNum?: number) => Promise<any[]>;

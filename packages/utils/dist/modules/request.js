@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.concurRequest = void 0;
 /**
  * 并发请求
  * @param urls 请求集合
@@ -8,19 +5,19 @@ exports.concurRequest = void 0;
  * @return {Promise<any[]>}
  * @example const res = concurRequest(["https://jsonplaceholder.typicode.com/posts"], 3)
  */
-var concurRequest = function (urls, maxNum) {
+export const concurRequest = (urls = [], maxNum = 3) => {
     // @ts-ignore
-    return new Promise(function (resolve, reject) {
-        var nextIndex = 0; // 下一个请求的索引
-        var finishCount = 0; // 完成的请求数量
-        var result = []; // 请求放置结果
+    return new Promise((resolve, reject) => {
+        let nextIndex = 0; // 下一个请求的索引
+        let finishCount = 0; // 完成的请求数量
+        const result = []; // 请求放置结果
         function _request() {
             if (nextIndex >= urls.length) {
                 return;
             }
-            var i = nextIndex;
-            var url = urls[nextIndex++];
-            fetch(url).then(function (resp) {
+            const i = nextIndex;
+            const url = urls[nextIndex++];
+            fetch(url).then(resp => {
                 result[i] = resp;
                 finishCount++;
                 if (finishCount === urls.length) {
@@ -29,9 +26,8 @@ var concurRequest = function (urls, maxNum) {
                 _request(); // 递归调用，下一个请求补位
             });
         }
-        for (var i = 0; i < Math.min(maxNum, urls.length); i++) {
+        for (let i = 0; i < Math.min(maxNum, urls.length); i++) {
             _request();
         }
     });
 };
-exports.concurRequest = concurRequest;
