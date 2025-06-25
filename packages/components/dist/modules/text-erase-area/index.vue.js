@@ -8,85 +8,64 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { computed } from 'vue';
+import { ref, onMounted } from 'vue';
+import { rgbaToHex } from 'sla-utils';
 export default await (() => __awaiter(void 0, void 0, void 0, function* () {
     const props = defineProps({
-        height: {
-            type: Number,
-            default: 100
-        },
         content: {
             type: String,
             required: true
         },
-        padding: {
-            type: Number,
-            default: 16
-        },
     });
-    const computedHeight = computed(() => props.height + 'px');
-    const computedPadding = computed(() => props.padding + 'px');
+    const textEraseArea = ref();
+    const bgColor = ref();
+    onMounted(() => {
+        bgColor.value = rgbaToHex(window.getComputedStyle(textEraseArea.value).backgroundColor);
+    });
     debugger; /* PartiallyEnd: #3632/scriptSetup.vue */
     const __VLS_ctx = {};
     let __VLS_components;
     let __VLS_directives;
     // CSS variable injection 
-    __VLS_ctx.computedPadding;
-    __VLS_ctx.computedHeight;
-    __VLS_ctx.computedHeight;
-    __VLS_ctx.computedPadding;
+    __VLS_ctx.bgColor;
     // CSS variable injection end 
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "l-text-overflow-area" }));
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "text-container" }));
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "more" }));
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "content" }));
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)(Object.assign({ class: "l-text-erase-area" }, { ref: "textEraseArea" }));
+    /** @type {typeof __VLS_ctx.textEraseArea} */ ;
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)(Object.assign({ class: "content" }));
     (props.content);
-    /** @type {__VLS_StyleScopedClasses['l-text-overflow-area']} */ ;
-    /** @type {__VLS_StyleScopedClasses['text-container']} */ ;
-    /** @type {__VLS_StyleScopedClasses['more']} */ ;
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)(Object.assign({ class: "erase" }));
+    __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)(Object.assign({ class: "text" }));
+    (props.content);
+    /** @type {__VLS_StyleScopedClasses['l-text-erase-area']} */ ;
     /** @type {__VLS_StyleScopedClasses['content']} */ ;
+    /** @type {__VLS_StyleScopedClasses['erase']} */ ;
+    /** @type {__VLS_StyleScopedClasses['text']} */ ;
     var __VLS_dollars;
     const __VLS_self = (yield import('vue')).defineComponent({
         setup() {
             return {
-                computedHeight: computedHeight,
-                computedPadding: computedPadding,
+                textEraseArea: textEraseArea,
+                bgColor: bgColor,
             };
         },
         props: {
-            height: {
-                type: Number,
-                default: 100
-            },
             content: {
                 type: String,
                 required: true
             },
-            padding: {
-                type: Number,
-                default: 16
-            },
         },
-        name: 'LTextOverflowArea'
+        name: 'LTextEraseArea'
     });
     return (yield import('vue')).defineComponent({
         setup() {
             return {};
         },
         props: {
-            height: {
-                type: Number,
-                default: 100
-            },
             content: {
                 type: String,
                 required: true
             },
-            padding: {
-                type: Number,
-                default: 16
-            },
         },
-        name: 'LTextOverflowArea'
+        name: 'LTextEraseArea'
     });
 }))(); /* PartiallyEnd: #4569/main.vue */

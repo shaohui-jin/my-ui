@@ -24,21 +24,31 @@ export default defineConfig({
       {
         text: 'sla-utils',
         items: [
-          { text: 'concurRequest 并发请求', link: '/utils/concurRequest' },
-          { text: 'performChunk 分片执行任务', link: '/utils/performChunk' },
+          {
+            text: '通用工具',
+            items: [
+              { text: 'color 颜色工具', link: '/utils/common/color' },
+            ]
+          },
+          {
+            text: '优化工具',
+            items: [
+              { text: 'concurRequest 并发请求', link: '/utils/optimize/concurRequest' },
+              { text: 'performChunk 分片执行任务', link: '/utils/optimize/performChunk' },
+            ]
+          },
         ]
       },
       {
         text: 'sla-components',
         items: [
-          { text: 'text-overflow-area 文本溢出', link: '/components/text-overflow-area' },
-        ]
-      },
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          {
+            text: '文本',
+            items: [
+              { text: 'text-overflow-area 文本溢出', link: '/components/text/text-overflow-area' },
+              { text: 'text-erase-area 文本擦除', link: '/components/text/text-erase-area' },
+            ]
+          },
         ]
       }
     ],

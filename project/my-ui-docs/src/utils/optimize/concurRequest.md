@@ -18,8 +18,7 @@ declare function concurRequest: (urls: string[], maxNum: number) => Promise<any[
 |  maxNum   | number   | 3   | 最大并发请求数量   |
 
 
-
-## 实例
+## 示例
 
 ```js
 const res = concurRequest(["https://jsonplaceholder.typicode.com/posts"], 3)

@@ -11,7 +11,8 @@
     "build": "turbo build --filter=my-ui-docs",
     "dev:all": "turbo dev",
     "dev:doc": "turbo dev --filter=doc",
-    "dev": "turbo dev --filter=my-ui-docs"
+    "dev": "turbo dev ",
+    "dev1": "turbo dev --filter=my-ui-docs"
   },
   "private": true,
   "keywords": [],

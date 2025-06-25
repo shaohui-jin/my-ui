@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: 立即开始 ->
-      link: /utils/concurRequest
+      link: /utils/common/color
     - theme: alt
       text: 团队支撑
       link: /team

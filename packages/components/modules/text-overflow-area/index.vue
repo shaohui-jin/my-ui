@@ -17,17 +17,12 @@ const props = defineProps({
   },
   padding: {
     type: Number,
-    default: 10
+    default: 16
   },
-  width: {
-    type: Number,
-    default: 100
-  }
 })
 
 const computedHeight = computed(() => props.height + 'px')
 const computedPadding = computed(() => props.padding + 'px')
-const computedWidth = computed(() => props.width + 'px')
 
 </script>
 
@@ -46,8 +41,7 @@ const computedWidth = computed(() => props.width + 'px')
 @import url('../../common/assets/common.css');
 
 .l-text-overflow-area {
-  border: 1px solid #000;
-  width: v-bind(computedWidth);
+  width: 100%;
   padding: v-bind(computedPadding);
   background: var(--blue-light-bg);
   
@@ -63,7 +57,9 @@ const computedWidth = computed(() => props.width + 'px')
     .content {
       line-height: 25px;
       margin-top: calc(0px - var(--margin-height));
+      text-align: start;
       word-wrap: break-word;
+      word-break: break-all;
     }
     
     .more {

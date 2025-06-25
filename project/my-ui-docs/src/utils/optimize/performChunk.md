@@ -19,7 +19,7 @@ declare const performChunk: (data: number | any[], taskHandler: Function, schedu
 |  scheduler   | Function       |  无   | 调度函数，用于控制任务执行的时机   |
 
 
-## 实例
+## 示例
 
 ```js
 const taskHandler = (item: any, index: number) => {

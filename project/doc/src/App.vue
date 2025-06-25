@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { concurRequest } from 'sla-utils'
-import { LTextOverflowArea } from 'sla-lemon'
+import { LTextOverflowArea, LTextEraseArea } from 'sla-lemon'
 
 // windowAlert('我是demo1')
-
+const content = `this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.
+`
 const aaa = () => {
   const urls = new Array(20).fill("https://jsonplaceholder.typicode.com/posts")
   concurRequest(urls, 3).then(res => {
@@ -13,7 +14,8 @@ const aaa = () => {
 </script>
 
 <template>
-  <LTextOverflowArea />
+  <LTextOverflowArea :content="content" />
+  <LTextEraseArea :content="content" />
   <button @click="aaa">测试并发请求</button>
 </template>
 
