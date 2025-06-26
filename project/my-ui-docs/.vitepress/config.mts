@@ -49,6 +49,12 @@ export default defineConfig({
               { text: 'text-erase-area 文本擦除', link: '/components/text/text-erase-area' },
             ]
           },
+          {
+            text: '图片',
+            items: [
+              { text: 'image-carousel 图片轮播', link: '/components/image/image-carousel' },
+            ]
+          },
         ]
       }
     ],
