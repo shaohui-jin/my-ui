@@ -90,7 +90,6 @@ const itemFn = (i: number) => {
 
 <style scoped lang="less">
 .l-image-carousel {
-  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   position: relative;
   height: 300px;
