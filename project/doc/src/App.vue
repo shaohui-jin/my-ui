@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { concurRequest } from 'sla-utils'
-import { LTextOverflowArea, LTextEraseArea, LImageCarousel } from 'sla-lemon'
+import { LTextOverflowArea, LTextEraseArea, LImageCarousel, LImage } from 'sla-lemon'
 
 // windowAlert('我是demo1')
 const content = `this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.
@@ -25,6 +25,7 @@ const urls = [
   <LTextOverflowArea :content="content" />
   <LTextEraseArea :content="content" />
   <LImageCarousel :imageUrls="urls" :defaultIndex="2" />
+  <LImage :src="'https://picsum.photos/seed/picsum2/200/300'"></LImage>
   <button @click="aaa">测试并发请求</button>
 </template>
 
