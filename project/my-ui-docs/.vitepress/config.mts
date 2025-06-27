@@ -52,6 +52,7 @@ export default defineConfig({
           {
             text: '图片',
             items: [
+              { text: 'image-carousel 图片', link: '/components/image/image' },
               { text: 'image-carousel 图片轮播', link: '/components/image/image-carousel' },
             ]
           },

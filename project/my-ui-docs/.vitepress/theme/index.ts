@@ -3,7 +3,7 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
-import { LTextOverflowArea, LTextEraseArea, LImageCarousel } from 'sla-lemon'
+import { LTextOverflowArea, LTextEraseArea, LImage, LImageCarousel } from 'sla-lemon'
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -15,6 +15,7 @@ export default {
     // ...
     app.component('LTextOverflowArea', LTextOverflowArea)
     app.component('LTextEraseArea', LTextEraseArea)
+    app.component('LImage', LImage)
     app.component('LImageCarousel', LImageCarousel)
   }
 } satisfies Theme
