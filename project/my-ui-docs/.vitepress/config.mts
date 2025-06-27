@@ -52,7 +52,8 @@ export default defineConfig({
           {
             text: '图片',
             items: [
-              { text: 'image-carousel 图片', link: '/components/image/image' },
+              { text: 'image 图片', link: '/components/image/image' },
+              { text: 'image-pointer 图片指针', link: '/components/image/image-pointer' },
               { text: 'image-carousel 图片轮播', link: '/components/image/image-carousel' },
             ]
           },
