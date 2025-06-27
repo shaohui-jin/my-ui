@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { concurRequest } from 'sla-utils'
-import { LTextOverflowArea, LTextEraseArea, LImageCarousel, LImage } from 'sla-lemon'
+import { LTextOverflowArea, LTextEraseArea, LImageCarousel, LImagePointer, LImage } from 'sla-lemon'
 
 // windowAlert('我是demo1')
 const content = `this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.
@@ -12,19 +12,37 @@ const aaa = () => {
   })
 }
 
-const urls = [
-  'https://picsum.photos/seed/picsum/400/300',
-  'https://picsum.photos/seed/picsum2/400/300',
-  'https://picsum.photos/seed/picsum3/400/300',
-  'https://picsum.photos/seed/picsum4/400/300',
-  'https://picsum.photos/seed/picsum5/400/300'
+const commonUrls = [
+  'https://picsum.photos/seed/picsum/400/400',
+  'https://picsum.photos/seed/picsum2/400/400',
+  'https://picsum.photos/seed/picsum3/400/400',
+  'https://picsum.photos/seed/picsum4/400/400',
+  'https://picsum.photos/seed/picsum5/400/400',
+  'https://picsum.photos/seed/picsum6/400/400',
+  'https://picsum.photos/seed/picsum7/400/400',
+  'https://picsum.photos/seed/picsum8/400/400',
+  'https://picsum.photos/seed/picsum9/400/400',
+]
+
+const radomUrls = [
+  'https://picsum.photos/seed/picsum1/250/200',
+  'https://picsum.photos/seed/picsum2/150/200',
+  'https://picsum.photos/seed/picsum3/200/200',
+  'https://picsum.photos/seed/picsum4/200/200',
+  'https://picsum.photos/seed/picsum5/150/200',
+  'https://picsum.photos/seed/picsum6/250/200',
+  'https://picsum.photos/seed/picsum7/200/200',
+  'https://picsum.photos/seed/picsum8/200/200',
+  'https://picsum.photos/seed/picsum9/200/200',
 ]
 </script>
 
 <template>
   <LTextOverflowArea :content="content" />
+  <br>
   <LTextEraseArea :content="content" />
-  <LImageCarousel :imageUrls="urls" :defaultIndex="2" />
+  <LImageCarousel :imageUrls="commonUrls" :defaultIndex="2" />
+  <LImagePointer :imageUrls="radomUrls" />
   <LImage :src="'https://picsum.photos/seed/picsum2/200/300'"></LImage>
   <button @click="aaa">测试并发请求</button>
 </template>
