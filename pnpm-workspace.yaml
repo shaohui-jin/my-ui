@@ -2,4 +2,5 @@ packages:
   # 放置组件库说明文档、demo等等
   - 'project/*'
   # 放置各种公用代码
-  - 'packages/**'
+  - 'packages/components'
+  - 'packages/utils'

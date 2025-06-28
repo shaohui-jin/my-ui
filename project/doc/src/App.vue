@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { concurRequest } from 'sla-utils'
+import { concurRequest, useDebounceRef } from 'sla-utils'
 import { LTextOverflowArea, LTextEraseArea, LImageCarousel, LImagePointer, LImage, LCanvasTime } from 'sla-lemon'
+
+const value = useDebounceRef('hello world', 200)
 
 const content = `this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.
 `
@@ -50,6 +52,9 @@ const radomUrls = [
   <button @click="aaa">测试并发请求</button>
   <br>
   <LCanvasTime color="#e00909" bgColor="#ffffff" />
+  <br>
+  <input v-model="value" placeholder="输入内容" />
+  {{ value }}
 </template>
 
 <style scoped>

@@ -29,6 +29,7 @@ export default defineConfig({
             items: [
               { text: 'number 数字工具', link: '/utils/common/number' },
               { text: 'color 颜色工具', link: '/utils/common/color' },
+              { text: 'hooks 工具', link: '/utils/common/hooks' },
             ]
           },
           {

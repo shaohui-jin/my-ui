@@ -7,13 +7,14 @@
   "type": "module",
   "scripts": {
     "check:tsc": "tsc --showConfig",
-    "build:tsc": "tsc --declaration --allowJs --target es6 --outDir dist index.ts",
+    "build:tsc": "tsc --declaration --allowJs --emitDeclarationOnly --target es6 --outDir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vue": "^3.5.17"
   }
 }
