@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { concurRequest } from 'sla-utils'
-import { LTextOverflowArea, LTextEraseArea, LImageCarousel, LImagePointer, LImage } from 'sla-lemon'
+import { LTextOverflowArea, LTextEraseArea, LImageCarousel, LImagePointer, LImage, LCanvasTime } from 'sla-lemon'
 
-// windowAlert('我是demo1')
 const content = `this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.
 `
 const aaa = () => {
@@ -41,10 +40,16 @@ const radomUrls = [
   <LTextOverflowArea :content="content" />
   <br>
   <LTextEraseArea :content="content" />
+  <br>
   <LImageCarousel :imageUrls="commonUrls" :defaultIndex="2" />
+  <br>
   <LImagePointer :imageUrls="radomUrls" />
+  <br>
   <LImage :src="'https://picsum.photos/seed/picsum2/200/300'"></LImage>
+  <br>
   <button @click="aaa">测试并发请求</button>
+  <br>
+  <LCanvasTime color="#e00909" bgColor="#ffffff" />
 </template>
 
 <style scoped>

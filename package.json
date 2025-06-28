@@ -6,13 +6,14 @@
   "packageManager": "pnpm@8.15.4",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:doc": "turbo build --filter=doc",
-    "build:all": "turbo build",
     "build": "turbo build --filter=my-ui-docs",
-    "dev:all": "turbo dev",
+    "build:doc": "turbo build --filter=doc",
+    "build:ui:doc": "turbo build --filter=my-ui-docs",
+    "build:all": "turbo build",
+    "dev": "turbo dev --filter=my-ui-docs",
     "dev:doc": "turbo dev --filter=doc",
-    "dev": "turbo dev ",
-    "dev1": "turbo dev --filter=my-ui-docs"
+    "dev:ui:doc": "turbo dev --filter=my-ui-docs",
+    "dev:all": "turbo dev"
   },
   "private": true,
   "keywords": [],

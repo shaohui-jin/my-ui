@@ -1,3 +1,4 @@
 export { concurRequest } from './modules/request';
 export { performChunk } from './modules/timeShare';
-export { rgbaToHex, hexToRGBA } from './modules/color';
+export { rgbaToHex, hexToRGBA, colorToRGBA } from './modules/color';
+export { getRandom } from './modules/common';

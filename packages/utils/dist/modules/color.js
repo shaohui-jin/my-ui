@@ -32,3 +32,16 @@ export const hexToRGBA = (hex, alpha) => {
         return "rgb(" + r + ", " + g + ", " + b + ")";
     }
 };
+/**
+ * @description: 把十六进制颜色转成rgba颜色对象
+ * @param hex
+ * @return {Object} - 包含r, g, b属性的对象
+ * @example
+ * colorToRGBA('#ff5733') // { r: 255, g: 87, b: 51 }
+ */
+export const colorToRGBA = (hex) => {
+    let r = parseInt(hex.slice(1, 3), 16);
+    let g = parseInt(hex.slice(3, 5), 16);
+    let b = parseInt(hex.slice(5, 7), 16);
+    return { r, g, b };
+};

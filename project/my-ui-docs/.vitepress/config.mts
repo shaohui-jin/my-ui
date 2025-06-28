@@ -27,6 +27,7 @@ export default defineConfig({
           {
             text: '通用工具',
             items: [
+              { text: 'number 数字工具', link: '/utils/common/number' },
               { text: 'color 颜色工具', link: '/utils/common/color' },
             ]
           },
@@ -56,6 +57,12 @@ export default defineConfig({
               { text: 'image-pointer 图片指针', link: '/components/image/image-pointer' },
               { text: 'image-carousel 图片轮播', link: '/components/image/image-carousel' },
             ]
+          },
+          {
+            text: '绘图',
+            items: [
+              { text: 'canvas-time 粒子时钟', link: '/components/canvas/canvas-time' },
+           ]
           },
         ]
       }

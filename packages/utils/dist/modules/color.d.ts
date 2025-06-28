@@ -11,3 +11,15 @@ export declare const rgbaToHex: (color: string) => string;
  * @return {string} - rgba或rgb颜色字符串
  */
 export declare const hexToRGBA: (hex: string, alpha: number) => string;
+/**
+ * @description: 把十六进制颜色转成rgba颜色对象
+ * @param hex
+ * @return {Object} - 包含r, g, b属性的对象
+ * @example
+ * colorToRGBA('#ff5733') // { r: 255, g: 87, b: 51 }
+ */
+export declare const colorToRGBA: (hex: string) => {
+    r: number;
+    g: number;
+    b: number;
+};
