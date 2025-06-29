@@ -30,6 +30,14 @@ export default defineConfig({
               { text: 'number 数字工具', link: '/utils/common/number' },
               { text: 'color 颜色工具', link: '/utils/common/color' },
               { text: 'hooks 工具', link: '/utils/common/hooks' },
+              {
+                text: 'typeScript 类型体操',
+                items: [
+                  { text: 'getValue 获取值', link: '/utils/common/typeScript/getValue' },
+                  { text: 'setValue 设置值', link: '/utils/common/typeScript/setValue' },
+                  { text: 'getOptional 获取可选属性', link: '/utils/common/typeScript/getOptional' },
+                ]
+              },
             ]
           },
           {

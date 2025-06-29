@@ -1,6 +1,6 @@
 
 /**
- * 分片执行任务
+ * @description 分片执行任务
  * @param data {number | any[]} 任务数据，可以是数字或数组
  * @param taskHandler {Function} 任务处理函数，接收当前任务数据和索引
  * @param scheduler {Function} 调度函数，用于控制任务执行的时机
