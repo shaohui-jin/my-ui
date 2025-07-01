@@ -7,20 +7,19 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build:tsc": "vue-tsc --declaration --outDir dist",
+    "build:tsc": "vue-tsc --declaration --emitDeclarationOnly --outDir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "element-plus": "^2.10.2",
     "less": "^4.3.0",
     "less-loader": "^12.3.0",
-    "typescript": "^5.8.3",
-    "vue": "^3.5.16"
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@types/node": "^24.0.8",
     "vue-tsc": "^2.2.8"
   }
 }

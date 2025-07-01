@@ -5,12 +5,14 @@
     "lib": ["ES2015", "dom"], /* lib用于指定要包含在编译中的库文件 */
     "strict": true,      // 启用所有严格类型检查选项
     "esModuleInterop": true, // 允许导入非ES模块
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types", "src/types"],
   },
   "paths": {
     "vue": ["node_modules/vue/dist/vue.esm.js"]
   },
-  "files": [
+  "include": [
+    "src/**/*",
     "index.ts"
   ],
   "exclude": [

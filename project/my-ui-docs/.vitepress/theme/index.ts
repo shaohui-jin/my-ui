@@ -5,7 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import {
   LTextOverflowArea, LTextEraseArea,
-  LImage, LImagePointer, LImageCarousel,
+  LImage, LImageAvatar, LImagePointer, LImageCarousel,
   LCanvasTime
 } from 'sla-lemon'
 export default {
@@ -21,6 +21,7 @@ export default {
     app.component('LTextEraseArea', LTextEraseArea)
     app.component('LImage', LImage)
     app.component('LImagePointer', LImagePointer)
+    app.component('LImageAvatar', LImageAvatar)
     app.component('LImageCarousel', LImageCarousel)
     app.component('LCanvasTime', LCanvasTime)
   }

@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { concurRequest, useDebounceRef } from 'sla-utils'
-import { LTextOverflowArea, LTextEraseArea, LImageCarousel, LImagePointer, LImage, LCanvasTime } from 'sla-lemon'
+import {
+  LTextOverflowArea, LTextEraseArea,
+  LImageCarousel, LImageAvatar, LImagePointer, LImage,
+  LCanvasTime } from 'sla-lemon'
 
 const value = useDebounceRef('hello world', 200)
 
@@ -55,6 +58,8 @@ const radomUrls = [
   <br>
   <input v-model="value" placeholder="输入内容" />
   {{ value }}
+  <br>
+  <LImageAvatar />
 </template>
 
 <style scoped>
