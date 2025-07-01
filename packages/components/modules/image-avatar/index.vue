@@ -198,7 +198,6 @@ const dragend = (e: DragEvent) => {
 .l-image-avatar {
   //height: 300px;
   width: 666px;
-  border: 1px solid #d9d9d9;
   
   .l-image-avatar__body {
     width: 100%;
