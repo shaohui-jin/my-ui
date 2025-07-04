@@ -9,7 +9,8 @@
 </script>
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { colorToRGBA, getRandom } from 'sla-utils'
+import { colorToRGBA } from 'sla-utils/color'
+import { getRandom } from 'sla-utils/number'
 
 const props = defineProps({
   color: {

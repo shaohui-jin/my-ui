@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { concurRequest, useDebounceRef } from 'sla-utils'
+import { useDebounceRef } from 'sla-utils/debounce'
+import { concurRequest } from 'sla-utils/request'
 import {
   LTextOverflowArea, LTextEraseArea,
   LImageCarousel, LImageAvatar, LImagePointer, LImage,
-  LCanvasTime } from 'sla-lemon'
+  LCanvasTime
+} from 'sla-lemon'
 
 const value = useDebounceRef('hello world', 200)
 

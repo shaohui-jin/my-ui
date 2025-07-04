@@ -1,20 +1,65 @@
 {
   "name": "sla-utils",
-  "version": "1.0.1",
-  "description": "",
-  "main": "index.ts",
-  "types": "dist/index.d.ts",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
+  "main": "./dist/counter.umd.cjs",
+  "module": "./dist/counter.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    },
+    "./color": {
+      "types": "./dist/color.d.ts",
+      "import": "./dist/color.es.js",
+      "require": "./dist/color.cjs.js"
+    },
+    "./debounce": {
+      "types": "./dist/debounce.d.ts",
+      "import": "./dist/debounce.es.js",
+      "require": "./dist/debounce.cjs.js"
+    },
+    "./number": {
+      "types": "./dist/number.d.ts",
+      "import": "./dist/number.es.js",
+      "require": "./dist/number.cjs.js"
+    },
+    "./permission": {
+      "types": "./dist/permission.d.ts",
+      "import": "./dist/permission.es.js",
+      "require": "./dist/permission.cjs.js"
+    },
+    "./request": {
+      "types": "./dist/request.d.ts",
+      "import": "./dist/request.es.js",
+      "require": "./dist/request.cjs.js"
+    },
+    "./timeShare": {
+      "types": "./dist/timeShare.d.ts",
+      "import": "./dist/timeShare.es.js",
+      "require": "./dist/timeShare.cjs.js"
+    },
+    "./typeScript": {
+      "types": "./dist/typeScript.d.ts",
+      "import": "./dist/typeScript.es.js",
+      "require": "./dist/typeScript.cjs.js"
+    }
+  },
   "scripts": {
+    "dev": "vite",
     "check:tsc": "tsc --showConfig",
-    "build:tsc": "tsc --declaration --allowJs --emitDeclarationOnly --target es6 --outDir dist",
+    "build:tsc": "vite build && tsc --declaration --allowJs --emitDeclarationOnly --outDir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0"
+  },
   "dependencies": {
-    "typescript": "^5.8.3",
+    "fs": "0.0.1-security",
     "vue": "^3.5.17"
   }
 }

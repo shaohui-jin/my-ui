@@ -9,7 +9,7 @@ outline: deep
 ## 基础用法
 
 ```typescript
-import { getOptional } from 'sla-utils'
+import { getOptional } from 'sla-utils/typeScript'
 type typeA = {
   option1: string;
   option2?: number;

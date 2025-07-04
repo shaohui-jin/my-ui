@@ -14,7 +14,7 @@
 </script>
 <script setup lang="ts">
 import  { computed, ref, onMounted } from 'vue'
-import  { rgbaToHex } from 'sla-utils'
+import  { rgbaToHex } from 'sla-utils/color'
 
 const props = defineProps({
   content: {

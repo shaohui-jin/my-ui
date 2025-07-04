@@ -9,7 +9,7 @@ outline: deep
 ## 基础用法
 
 ```typescript
-import { setValue } from 'sla-utils'
+import { setValue } from 'sla-utils/typeScript'
 type typeA = {
   age: number,
   name: string,

@@ -38,4 +38,12 @@ export type getOptional<T> = {
   [K in keyof T as T[K] extends Required<T>[K] ? never : K]: T[K];
 }
 
+/**
+ * @description 生成一个类型，将数组“T”转换为联合类型。
+ * @example
+ * const arr = ['option1', 'option2', 'option3'] as const
+ * type typeB = arrayToUnion<typeof arr> // 'option1' | 'option2' | 'option3'
+ */
+export type arrayToUnion<T extends readonly any[]> = T[number];
+
 

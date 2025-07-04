@@ -1,4 +1,3 @@
-
 /**
  * @description: 把rgba颜色(或rgb颜色)转成十六进制颜色
  * @params {string} color - rgba或rgb颜色字符串

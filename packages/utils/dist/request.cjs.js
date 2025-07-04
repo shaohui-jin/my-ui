@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const f=(e=[],i=3)=>new Promise((u,h)=>{let n=0,o=0;const c=[];function r(){if(n>=e.length)return;const t=n,s=e[n++];fetch(s).then(l=>{c[t]=l,o++,o===e.length&&u(c),r()})}for(let t=0;t<Math.min(i,e.length);t++)r()});exports.concurRequest=f;
