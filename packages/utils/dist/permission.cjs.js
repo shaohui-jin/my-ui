@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const o=n=>{const s={};return n.forEach((r,e)=>{s[r]=1<<e}),{getPermission:r=>Array.from(new Set(r)).reduce((e,t)=>e^s[t],0),hasPermission:(r,e)=>Object.prototype.hasOwnProperty.call(s,e)?!!(r&s[e]):(console.warn(`Permissions has not ${e}`),!1),switchPermission:(r,e)=>r^s[e]}};exports.usePermission=o;
