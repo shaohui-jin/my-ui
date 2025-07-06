@@ -33,6 +33,7 @@ export default defineConfig({
                 text: 'hooks 工具',
                 items: [
                   { text: 'debounce 防抖', link: '/utils/common/hooks/debounce' },
+                  { text: 'permission 权限', link: '/utils/common/hooks/permission' },
 
                 ]
               },

@@ -137,3 +137,28 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * md demo
+ */
+:root {
+
+  .demo {
+    width: 100%;
+    padding: 1em;
+    border-radius: 4px;
+    background: rgb(246, 246, 247);
+
+    button,
+    input {
+      padding: 0 10px;
+      border: 1px solid #333;
+      color: #333;
+      border-radius: 4px;
+      margin-right: 4px;
+    }
+    .active {
+      background-color: #333;
+      color: #fff;
+    }
+  }
+}

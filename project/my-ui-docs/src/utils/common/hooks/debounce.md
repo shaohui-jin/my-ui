@@ -18,10 +18,10 @@ const handleClick= debounce(() => {
 }, 1000);
 </script>
 
-<div style="background: #f0f0f0; padding: 10px; border-radius: 5px;">
-    <button @click="handleClick" >快速点击，1秒后加1</button>
-    <br>
-    防抖响应式数据： {{ demo }}
+<div class="demo">
+  <button @click="handleClick" >快速点击，1秒后加1</button>
+  <br>
+  防抖响应式数据： {{ demo }}
 </div>
 
 代码如下：
@@ -36,7 +36,7 @@ const handleClick= debounce(() => {
   }, 1000);
 </script>
 
-<div style="background: #f0f0f0; padding: 10px; border-radius: 5px;">
+<div class="demo">
   <button @click="handleClick" >快速点击，1秒后加1</button>
   <br>
   防抖响应式数据： {{ demo }}
@@ -61,10 +61,10 @@ declare const debounce: (fn: (...args: any[]) => any, delay?: number) => (...arg
 
 ### 基础用法
 
-<div style="background: #f0f0f0; padding: 10px; border-radius: 5px;">
-    请输入： <input v-model="demo1" placeholder="输入内容，1秒后更新" />
-    <br>
-    防抖响应式数据： {{ demo1 }}
+<div class="demo">
+  请输入： <input v-model="demo1" placeholder="输入内容，1秒后更新" />
+  <br>
+  防抖响应式数据： {{ demo1 }}
 </div>
 
 代码如下：
@@ -75,7 +75,7 @@ declare const debounce: (fn: (...args: any[]) => any, delay?: number) => (...arg
   const demo1 = useDebounceRef('', 1000);
 </script>
 
-<div style="background: #f0f0f0; padding: 10px; border-radius: 5px;">
+<div class="demo">
   请输入： <input v-model="demo1" placeholder="输入内容，1秒后更新" />
   <br>
   防抖响应式数据： {{ demo }}

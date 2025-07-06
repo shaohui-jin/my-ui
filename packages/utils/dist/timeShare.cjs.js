@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const f=(n,l,i)=>{let e=[];if(typeof n=="number"?e=new Array(n).fill(n):e=n,e.length===0)return;let r=0;function t(){r!==e.length&&i(u=>{for(;u()&&r<e.length;)l(e[r],r),r++;t()})}t()};exports.performChunk=f;

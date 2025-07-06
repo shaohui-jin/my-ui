@@ -13,7 +13,7 @@ const content = `
     this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.this is a long text.
 `
 </script>
-<LTextEraseArea :content="content" style="background: rgb(246, 246, 247);"/>
+<LTextEraseArea :content="content" class="demo"/>
 
 代码如下： 
 ```vue
@@ -23,7 +23,7 @@ const content = `
 `
 </script>
 
-<LTextEraseArea :content="content" style="background: rgb(246, 246, 247);"/>
+<LTextEraseArea :content="content" class="demo"/>
 ```
 
 ## text-erase-area API
