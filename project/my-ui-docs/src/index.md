@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-  name: "My Tool Project"
-  text: "A Personal Tool Site"
+  name: "杂七杂八工具库"
+  text: "这里有奇奇怪怪的工具"
   tagline: 
   actions:
     - theme: brand
@@ -15,9 +15,9 @@ hero:
 
 features:
   - title: sla-lemon
-    details: 个人的UI组件
+    details: 俺的UI组件
   - title: sla-utils
-    details: 个人的工具类
+    details: 俺的工具类
 #  - title: more
 #    details: 待补充。。。
 ---

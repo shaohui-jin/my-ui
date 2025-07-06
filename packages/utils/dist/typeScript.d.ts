@@ -1,4 +1,12 @@
 /**
+ * @description 生成一个类型，将对象类型“T”的键转换为大写。
+ * @example
+ * type typeA = {
+ *   age: number;
+ *   name: string;
+ * }
+ *
+/**
  * @description 生成一个类型，将对象类型“T”的键转换为getter方法。
  * @example
  * type typeA = {
@@ -42,3 +50,11 @@ export type getOptional<T> = {
  * type typeB = arrayToUnion<typeof arr> // 'option1' | 'option2' | 'option3'
  */
 export type arrayToUnion<T extends readonly any[]> = T[number];
+/**
+ * @description 生成一个响应式ref，类型为组件原型。
+ * @param _comp 组件
+ * @example
+ * const formRef = getCompType(ElForm)
+ * await formRef.value.validate()
+ */
+export declare function getCompType<T extends abstract new (...args: any) => any>(_comp: T): import("vue").Ref<InstanceType<T> | undefined, InstanceType<T> | undefined>;
