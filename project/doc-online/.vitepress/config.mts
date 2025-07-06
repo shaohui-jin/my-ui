@@ -4,13 +4,13 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "杂七杂八工具库",
   description: "A Personal Tool Site",
-  base: '/my-ui/',
+  base: '/my-tool/',
   srcDir: './src',
   outDir: './dist',
   cacheDir: './.cache',
   lastUpdated: true,
   sitemap: {
-    hostname: 'https://shaohui-jin.github.io/my-ui/',
+    hostname: 'https://shaohui-jin.github.io/my-tool/',
     lastmodDateOnly: false
   },
   themeConfig: {
@@ -83,7 +83,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/shaohui-jin/my-ui' }
+      { icon: 'github', link: 'https://github.com/shaohui-jin/my-tool' }
     ],
     search: {
       provider: 'local'
