@@ -8,3 +8,13 @@
 ```
 tsc --declaration --allowJs --target es6 --outDir dist index.ts
 ```
+
+2. 部分工具使用了 elementPlus 组件
+
+全量引入css： `import 'element-plus/dist/index.css'`
+
+部分引入：
+
+`
+import 'element-plus/theme-chalk/el-message.css'
+`

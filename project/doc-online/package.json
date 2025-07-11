@@ -9,9 +9,11 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
+    "vite": "^7.0.4",
     "vitepress": "latest"
   },
   "dependencies": {
+    "element-plus": "^2.10.3",
     "sla-lemon": "workspace:^",
     "sla-utils": "workspace:^"
   }

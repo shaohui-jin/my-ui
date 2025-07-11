@@ -19,7 +19,7 @@ export default defineConfig({
     rollupOptions: {
       // 保证每个工具单独打包
       input: entries,
-      external: ['vue'],
+      external: ['vue', 'clipboard', 'element-plus'],
       output: {
         globals: {
           vue: 'Vue'

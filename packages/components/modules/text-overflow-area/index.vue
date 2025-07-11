@@ -37,13 +37,10 @@ const computedPadding = computed(() => props.padding + 'px')
   </div>
 </template>
 
-<style  lang="less">
-@import url('../../common/assets/common.css');
-
+<style lang="less" scoped>
 .l-text-overflow-area {
   width: 100%;
   padding: v-bind(computedPadding);
-  background: var(--blue-light-bg);
   
   .text-container {
     height: v-bind(computedHeight);

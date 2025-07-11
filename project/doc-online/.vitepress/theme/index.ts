@@ -3,11 +3,15 @@ import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import 'element-plus/dist/index.css'
 import {
   LTextOverflowArea, LTextEraseArea,
   LImage, LImageAvatar, LImagePointer, LImageCarousel,
   LCanvasTime
 } from 'sla-lemon'
+
+import LoaderType from '../../components/loader/index.vue'
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -24,5 +28,7 @@ export default {
     app.component('LImageAvatar', LImageAvatar)
     app.component('LImageCarousel', LImageCarousel)
     app.component('LCanvasTime', LCanvasTime)
+
+    app.component('LoaderType', LoaderType)
   }
 } satisfies Theme
