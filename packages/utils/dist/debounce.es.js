@@ -1,25 +1,29 @@
-import { customRef as i } from "vue";
-const c = (t, r = 300) => {
-  let e = null;
-  return function(...u) {
-    e && clearTimeout(e), e = setTimeout(() => {
-      t.apply(this, u);
-    }, r);
+import { customRef as l } from "vue";
+const s = (t, o = 300, u = !1) => {
+  let r = null;
+  return function(...e) {
+    if (u) {
+      t.apply(this, e), u = !1;
+      return;
+    }
+    r && clearTimeout(r), r = setTimeout(() => {
+      t.apply(this, e);
+    }, o);
   };
-}, l = (t, r = 300) => i((e, u) => {
-  let o = null;
+}, c = (t, o = 300) => l((u, r) => {
+  let e = null;
   return {
     get() {
-      return e(), t;
+      return u(), t;
     },
     set(n) {
-      o && clearTimeout(o), o = setTimeout(() => {
-        t = n, u();
-      }, r);
+      e && clearTimeout(e), e = setTimeout(() => {
+        t = n, r();
+      }, o);
     }
   };
 });
 export {
-  c as debounce,
-  l as useDebounceRef
+  s as debounce,
+  c as useDebounceRef
 };

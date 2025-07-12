@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# debounce 防抖
+# debounce 防抖 <Badge type="tip" text="debounce" />
 
 ## debounce 防抖函数
 
@@ -46,13 +46,18 @@ const handleClick= debounce(() => {
 ### 配置参数
 
 ```ts
-declare const debounce: (fn: (...args: any[]) => any, delay?: number) => (...args: any[]) => void;
+declare const debounce: (
+  fn: (...args: any[]) => any, 
+  delay?: number, 
+  immediate?: boolean
+) => (...args: any[]) => void;
 ```
 
-| 参数名 | 类型     | 默认值 | 描述         |
-|-----|--------|-----|------------|
-|  fn   | (...args: any[]) => any       |   | 需要防抖的函数 |
-|  delay   | number | 300  | 防抖延迟时间，单位毫秒，默认300ms |
+| 参数名 | 类型            | 默认值   | 描述            |
+|-----|-------------------------|-------|---------------------|
+|  fn   | (...args: any[]) => any |   | 需要防抖的函数     |
+|  delay   | number  | 300   | 防抖延迟时间，单位毫秒，默认300ms |
+|  immediate   | boolean   | false | 是否第一次执行     |
 
 
 ## useDebounceRef 防抖ref

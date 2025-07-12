@@ -27,6 +27,7 @@ export default defineConfig({
       '/utils/': [
         { text: 'number 数字工具', link: '/utils/number' },
         { text: 'object 对象工具', link: '/utils/object' },
+        { text: 'array 数组工具', link: '/utils/array' },
         { text: 'color 颜色工具', link: '/utils/color' },
         { text: 'clipboard 剪切板工具', link: '/utils/clipboard' },
         {
@@ -40,18 +41,19 @@ export default defineConfig({
         {
           text: 'typeScript 类型体操',
           items: [
-            { text: 'getValue 获取值', link: '/utils/typeScript/getValue' },
-            { text: 'setValue 设置值', link: '/utils/typeScript/setValue' },
-            { text: 'getOptional 获取可选属性', link: '/utils/typeScript/getOptional' },
-            { text: 'arrayToUnion 数组转联合', link: '/utils/typeScript/arrayToUnion' },
-            { text: 'getCompType 获取组件ref', link: '/utils/typeScript/getCompType' },
+            { text: 'getValue 获取值', link: '/utils/typescript/getValue' },
+            { text: 'setValue 设置值', link: '/utils/typescript/setValue' },
+            { text: 'getOptional 获取可选属性', link: '/utils/typescript/getOptional' },
+            { text: 'setOptional 设置可选属性', link: '/utils/typescript/setOptional' },
+            { text: 'arrayToUnion 数组转联合', link: '/utils/typescript/arrayToUnion' },
+            { text: 'getCompType 获取组件ref', link: '/utils/typescript/getCompType' },
           ]
         },
         {
           text: '优化工具',
           items: [
-            { text: 'concurRequest 并发请求', link: '/utils/concurRequest' },
-            { text: 'performChunk 分片执行任务', link: '/utils/performChunk' },
+            { text: 'concurRequest 并发请求', link: '/utils/optimize/concurRequest' },
+            { text: 'performChunk 分片执行任务', link: '/utils/optimize/performChunk' },
           ]
         }
       ],

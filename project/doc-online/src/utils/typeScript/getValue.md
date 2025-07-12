@@ -2,15 +2,14 @@
 outline: deep
 ---
 
-# getValue 获取值
+# getValue 获取值 <Badge type="tip" text="typescript" />
 
-生成一个类型，将对象类型“T”的键转换为getter方法。
+获取对象getter方法。
 
 ## 基础用法
 
 ```typescript
-import { getValue } from 'sla-utils/typeScript'
-type typeA = {
+interface typeA {
   age: number,
   name: string,
 }

@@ -2,14 +2,18 @@
 outline: deep
 ---
 
-# performChunk 分片执行任务
+# performChunk 分片执行任务 <Badge type="tip" text="optimize" />
 
 concurRequest 被用来提供并发请求Get接口。
 
 ## 配置参数
 
 ```ts
-declare const performChunk: (data: number | any[], taskHandler: Function, scheduler: Function) => void;
+declare const performChunk: (
+  data: number | any[], 
+  taskHandler: Function, 
+  scheduler: Function
+) => void;
 ```
 
 | 参数名 | 类型             | 默认值 | 描述         |

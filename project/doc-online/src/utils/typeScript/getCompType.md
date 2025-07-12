@@ -2,9 +2,9 @@
 outline: deep
 ---
 
-# getCompType 获取组件类型
+# getCompType 获取组件类型 <Badge type="tip" text="typescript" />
 
-生成一个响应式ref，类型为组件原型。
+获取一个组件ref。
 
 ## 基础用法
 

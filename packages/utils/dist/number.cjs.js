@@ -1,1 +1,1 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const o=(t,e)=>Math.floor(Math.random()*(e+1-t)+t);exports.getRandom=o;
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const o=(t,e)=>Math.floor(Math.random()*(e+1-t)+t),r=(t="0",e=2)=>Number.parseFloat(t).toFixed(e);exports.getRandom=o;exports.scaleFormat=r;

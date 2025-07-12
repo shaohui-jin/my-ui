@@ -1,4 +1,4 @@
-import { arrayToUnion } from './typeScript';
+import { arrayToUnion } from './typescript';
 
 /**
  * @tyedef UsePermissionReturn

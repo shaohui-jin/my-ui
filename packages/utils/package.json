@@ -42,10 +42,10 @@
       "import": "./dist/timeShare.es.js",
       "require": "./dist/timeShare.cjs.js"
     },
-    "./typeScript": {
-      "types": "./dist/typeScript.d.ts",
-      "import": "./dist/typeScript.es.js",
-      "require": "./dist/typeScript.cjs.js"
+    "./typescript": {
+      "types": "./dist/typescript.d.ts",
+      "import": "./dist/typescript.es.js",
+      "require": "./dist/typescript.cjs.js"
     },
     "./clipboard": {
       "types": "./dist/clipboard.d.ts",
@@ -56,6 +56,11 @@
       "types": "./dist/object.d.ts",
       "import": "./dist/object.es.js",
       "require": "./dist/object.cjs.js"
+    },
+    "./array": {
+      "types": "./dist/array.d.ts",
+      "import": "./dist/array.es.js",
+      "require": "./dist/array.cjs.js"
     }
   },
   "scripts": {

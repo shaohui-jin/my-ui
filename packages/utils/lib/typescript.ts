@@ -1,17 +1,9 @@
 import { ref } from 'vue';
 
 /**
- * @description 生成一个类型，将对象类型“T”的键转换为大写。
+ * @description 获取对象getter方法。
  * @example
- * type typeA = {
- *   age: number;
- *   name: string;
- * }
- *
-/**
- * @description 生成一个类型，将对象类型“T”的键转换为getter方法。
- * @example
- * type typeA = {
+ * interface typeA {
  *   age: number;
  *   name: string;
  * }
@@ -22,9 +14,9 @@ export type getValue<T> = {
 }
 
 /**
- * @description 生成一个类型，将对象类型“T”的键转换为setter方法。
+ * @description 获取对象setter方法。
  * @example
- * type typeA = {
+ * interface typeA {
  *   age: number;
  *   name: string;
  * }
@@ -35,9 +27,9 @@ export type setValue<T> = {
 }
 
 /**
- * @description 生成一个类型，将对象类型“T”的可选属性转换为新的类型。
+ * @description 获取对象可选属性。
  * @example
- * type typeA = {
+ * interface typeA {
  *   option1: string;
  *   option2?: number;
  *   option3?: boolean;
@@ -49,7 +41,19 @@ export type getOptional<T> = {
 }
 
 /**
- * @description 生成一个类型，将数组“T”转换为联合类型。
+ * @description 设置对象可选属性
+ * @example
+ * interface typeA {
+ *   option1: string;
+ *   option2: number;
+ *   option3: boolean;
+ * }
+ * type typeB = setOptional<typeA, 'option2' | 'option3'> // { option1: string; option2?: number; option3?: boolean; }
+ */
+export type setOptional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+
+/**
+ * @description 将数组转换为联合类型。
  * @example
  * const arr = ['option1', 'option2', 'option3'] as const
  * type typeB = arrayToUnion<typeof arr> // 'option1' | 'option2' | 'option3'
@@ -57,7 +61,7 @@ export type getOptional<T> = {
 export type arrayToUnion<T extends readonly any[]> = T[number];
 
 /**
- * @description 生成一个响应式ref，类型为组件原型。
+ * @description 获取一个组件ref。
  * @param _comp 组件
  * @example
  * const formRef = getCompType(ElForm)

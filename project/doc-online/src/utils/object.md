@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# object 对象工具
+# object 对象工具 <Badge type="tip" text="object" />
 
 ## flatten(对象扁平化)
 

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const a=(o,n="children")=>o.reduce((t,c)=>{t=t.concat(c);const e=n?c[n]:c;return Array.isArray(e)?t.concat(a(e,n)):t},[]);function r(o,n){let t=0;const c=n.length;for(const e in n)for(const i in o)n[e]===o[i]&&t++;return t===c}exports.flatten=a;exports.isEqual=r;

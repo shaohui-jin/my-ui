@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# clipboard 剪切板工具
+# clipboard 剪切板工具 <Badge type="tip" text="clipboard" />
 
 ## handleClipboard
 

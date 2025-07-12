@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# concurRequest 并发请求
+# concurRequest 并发请求 <Badge type="tip" text="optimize" />
 
 concurRequest 被用来提供并发请求Get接口。
 

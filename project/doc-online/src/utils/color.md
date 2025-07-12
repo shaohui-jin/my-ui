@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# color 颜色工具
+# color 颜色工具 <Badge type="tip" text="color" />
 
 ## rgbaToHex
 

@@ -7,3 +7,9 @@
  * getRandom(1, 10) // 返回1到10之间的随机整数
  */
 export declare const getRandom: (min: number, max: number) => number;
+/**
+ * @desc 格式化小数
+ * @param value 待格式化数据
+ * @param scale 格式化位数
+ */
+export declare const scaleFormat: (value?: string, scale?: number) => string;

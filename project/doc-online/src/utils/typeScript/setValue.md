@@ -2,15 +2,14 @@
 outline: deep
 ---
 
-# getValue 设置值
+# getValue 设置值 <Badge type="tip" text="typescript" />
 
-生成一个类型，将对象类型“T”的键转换为setter方法。
+获取对象setter方法。
 
 ## 基础用法
 
 ```typescript
-import { setValue } from 'sla-utils/typeScript'
-type typeA = {
+interface typeA {
   age: number,
   name: string,
 }

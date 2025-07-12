@@ -2,15 +2,14 @@
 outline: deep
 ---
 
-# getOptional 获取可选属性
+# getOptional 获取可选属性 <Badge type="tip" text="typescript" />
 
-生成一个类型，将对象类型“T”的可选属性转换为新的类型。
+获取对象可选属性。
 
 ## 基础用法
 
 ```typescript
-import { getOptional } from 'sla-utils/typeScript'
-type typeA = {
+interface typeA {
   option1: string;
   option2?: number;
   option3?: boolean;

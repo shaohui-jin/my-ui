@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# permission 权限
+# permission 权限 <Badge type="tip" text="permission" />
 
 ## usePermission 权限hook
 
