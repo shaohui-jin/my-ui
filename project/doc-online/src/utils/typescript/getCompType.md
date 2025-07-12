@@ -25,7 +25,9 @@ await formRef.value.validate()
 ## 体操实现
 
 ```ts
-export function getCompType<T extends abstract new (...args: any) => any>(_comp: T) {
+export function getCompType<T extends abstract new (...args: any) => any>(
+  _comp: T
+) {
   return ref<InstanceType<T>>()
 }
 ```

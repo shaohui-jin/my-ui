@@ -9,7 +9,7 @@ concurRequest 被用来提供并发请求Get接口。
 ## 配置参数
 
 ```ts
-declare function concurRequest: (urls: string[], maxNum: number) => Promise<any[]>;
+declare const concurRequest: (urls?: string[], maxNum?: number) => Promise<any[]>;
 ```
 
 | 参数名 | 类型 | 默认值 | 描述         |
